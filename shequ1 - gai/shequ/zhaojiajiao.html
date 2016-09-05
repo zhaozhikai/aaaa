@@ -1,0 +1,192 @@
+﻿<!DOCTYPE html>
+<html style="font-size: 100px;">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>找家教</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/zhaojiajiao.css"/>
+	</head>
+	<style type="text/css">
+		.ge {
+    width: 0.37rem;
+    float: right;
+    /*margin-left: 1.3rem;*/
+    line-height: 0.4rem;
+    /* width: 30%; */
+}
+.fan {
+    width: 0.18rem;
+    float: left;
+    line-height: 0.4rem;
+    /* width: 30%; */
+    margin-right: 29%;
+    margin-top: 0.05rem;
+}
+	</style>
+	<body>
+		<!--头部-->
+		<div class="header">
+			<div class="head">
+		<a href="javascript:window.history.go(-1)" class="fan"><img src="img/fanhui.png"/></a>
+		<span class="wen">找家教</span>
+		<a href="" class="ge"><img src="img/geren.png"/></a>
+	</div>
+		</div>
+		<!--搜索-->
+		<div class="sou">
+			<div class="kuang"></div>
+			<img id="ssou" src="img/sou.png"/>
+			<input type="text" id="serch" value="Search" />
+			<a href="" id="fabu">&nbsp;</a>
+		</div>
+		<!--图-->
+		<!--<div class="beitu"><img src="img/tu.png"/></div>-->
+		<!--大图滚动-->
+		<div class="gd" id='gd'>
+		<!--<ul class='gul'>
+			<li class='gl'></li>
+			<li></li>
+			<li></li>
+		</ul>-->
+		<div class="gds">
+			<div class="gd3"></div>
+			<div class="gd1"></div>
+			<div class="gd2"></div>
+			<div class="gd3"></div>
+			<div class="gd1"></div>
+		</div>
+	</div>
+		<!--周边-->
+		<div class="zhou">
+			<a href="">&nbsp;</a>
+			<a href="">&nbsp;</a>
+		</div>
+		<!--阶段-->
+		<ul class="lei">
+			<li>
+				<a href="jiajiaoxiangqing.html">
+					<img src="img/biao1.png"/>
+				</a>
+				<p>小学</p>
+			</li>
+			<li>
+				<a href="jiajiaoxiangqing.html">
+					<img src="img/biao2.png"/>
+				</a>
+				<p>初中</p>
+			</li>
+			<li>
+				<a href="jiajiaoxiangqing.html">
+					<img src="img/biao3.png"/>
+				</a>
+				<p>高中</p>
+			</li>
+			<li>
+				<a href="jiajiaoxiangqing.html">
+					<img src="img/biao4.png"/>
+				</a>
+				<p>兴趣</p>
+			</li>
+		</ul>
+		<!--top-->
+		<img class="top" src="img/xian.png"/>
+		<!--底-->
+		<div class="foot">
+			<a href=""><img src="img/zuo1.png"/></a>
+			<a href=""><img src="img/zuo2.png"/></a>
+			
+		</div>
+	</body>
+	<script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+	<script src="js/reset.js" type="text/javascript"></script>
+	<script src="js/zhaojiajiao.js" type="text/javascript"></script>
+	<script type='text/javascript'>
+	var index=0;
+	var time=null;
+	var time1=null;
+	var time2=null;
+	var pw=$(document.body).width();
+	var index=pw;
+	$('.gd').eq(0).scrollLeft(index);
+	var pl=(100/640)*pw;
+	var bz=true;
+	var bz1=true;
+		$(function(){
+			clearInterval(time);
+			$('html').eq(0).css('font-size',(100/640)*pw+'px');
+			$('.co').scrollLeft(3.74*pl);
+//大图滚动
+			gundong();	
+		})
+
+		var gd=document.getElementById('gd');
+var stx,enx;
+gd.addEventListener('touchstart',function(e){
+	e.stopPropagation();
+	var touch = event.touches[0];
+	stx=touch.pageX;
+})
+gd.addEventListener('touchmove',function(e){
+	e.stopPropagation();
+	var touch = e.touches[0];
+	enx=touch.pageX;
+})
+gd.addEventListener('touchend',function(e){
+	e.stopPropagation();
+	if(enx-stx<-40){
+		clearInterval(time);
+		clearInterval(time1);
+		time1=setInterval(function(){
+				index+=4;
+				var sc=index;
+				if(index>=pw*3){
+					index=0;
+					sc=0;
+				}	
+				if(sc%pw<=3){
+					clearInterval(time1);
+					gundong();
+				}
+				$('.gd').eq(0).scrollLeft(sc);
+				},1)
+	}
+	if(enx-stx>40){
+		clearInterval(time);
+		clearInterval(time1);
+		time1=setInterval(function(){
+				index-=4;
+				var sc=index;
+				if(index<=3){
+					index=pw*3;
+					sc=pw*3;
+				}	
+				if(sc%pw<=3){
+					clearInterval(time1);
+					gundong();
+				}
+				$('.gd').eq(0).scrollLeft(sc);
+				},1)
+	}
+})
+function gundong(){
+		clearInterval(time);
+		time=setInterval(function(){
+				clearInterval(time1);
+				time1=setInterval(function(){
+				index+=4;
+				var sc=index;
+				if(index>=pw*3){
+					index=0;
+					sc=0;
+				}	
+				if(sc%pw<=3){
+					clearInterval(time1);
+				}
+				$('.gd').eq(0).scrollLeft(sc);
+				},1)			
+				},5000);
+	}
+
+	</script>
+</html>

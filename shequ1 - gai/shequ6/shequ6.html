@@ -1,0 +1,316 @@
+﻿<!DOCTYPE html>
+<html lang="en" style='font-size: 100px;'>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>Document</title>
+	<style type='text/css'>
+		*{
+			margin:0;
+			padding:0;
+		}
+		html,body{
+			font-size: 100px;
+			width: 100%;
+			height: 100%;
+		}
+		.contr{
+			width:6.4rem;
+			float:left;
+		}
+		.top{
+			width:100%;
+			background: #007AF4;
+		}
+		.top p{
+			overflow: hidden;
+			line-height: 0.88rem;
+		}
+		.top p span{
+			float:left;
+		}
+		.top p span img{
+			vertical-align: top;
+		}
+		.ls{
+			color:#fff;
+			font-weight: bold;
+			font-size: 0.34rem;
+			margin-right:2.2rem;
+		}
+		.top1{
+			width:0.18rem;
+			height:0.33rem;
+			margin-left:0.2rem;
+			margin-right:2.2rem;
+			margin-top:0.28rem;
+		}
+		.top2{
+			width:0.35rem;
+			height:0.36rem;
+			margin-top:0.28rem;
+		}
+		.search{
+			height:0.85rem;
+		}
+		.search input{
+			float:left;
+			background: none;
+			border:0px;
+			outline: none;
+			height:0.58rem;
+			font-size: 0.24rem;
+		}
+		.tex input{
+			width:4rem;
+			margin-left:0.5rem;
+		}
+		.tex{
+			float:left;
+			width:4.62rem;
+			height:0.58rem;
+			margin-top:0.135rem;
+			margin-left:0.14rem;
+			background: url(images/search.png) 0 0 no-repeat;
+			background-size:100% 100%; 
+		}
+		input.fb{
+			display: block;
+			width:1.4rem;
+			color:#fff;
+			font-weight: bold;
+			background: #007AF4;
+			margin-top:0.135rem;
+			margin-left:0.13rem;
+			border-radius: 0.08rem;
+		}
+		
+		
+		.gd{
+			overflow: hidden;
+			position: relative;
+			width:100%;
+		}
+		.gds{
+			width:25.6rem;
+			overflow: hidden;
+			height:3rem;
+		}
+		.gul{
+			overflow: hidden;
+			position: absolute;
+			z-index: 1;
+			right:0.1rem;
+			bottom:0.1rem;
+		}
+		.gul li{
+			float:left;
+			width:0.16rem;
+			height:0.16rem;
+			margin-left:0.14rem;
+			border-radius: 50%;
+			background: #4C93EB;
+		}
+		li.gl{
+			background: #fff;
+		}
+		.gd1,.gd2,.gd3{
+			float:left;
+			width:6.4rem;
+			height:3rem;
+		}
+		.gd1{
+			background: url(images/gd1.png) 0 0 no-repeat;
+			background-size: 100% 100%;
+		}
+		
+		.gd2{
+			background: url(images/tu.png) 0 0 no-repeat;
+			background-size: 100% 100%;
+		}
+		.gd3{
+			background: url(images/weixiu.png) 0 0 no-repeat;
+			background-size: 100% 100%;
+		}
+		
+		
+		.cul{
+			overflow: hidden;
+			list-style: none;
+			margin-left:0.2rem;
+		}
+		.cul li{
+			text-align: center;
+			font-size: 0.24rem;
+			margin-left:0.4rem;
+			margin-top:0.5rem;
+			float:left;
+		}
+		.cul li img{
+			width:0.98rem;
+			height:0.98rem;
+			margin-bottom:0.23rem;
+		}
+		.cu1{
+		list-style:none;
+		margin-top: 0.98rem;
+		}
+		.cu1 li{
+			margin-left:0.37rem;
+			float:left;
+		}
+		.cu1 li img{
+			width:2.64rem; 
+			height:0.78rem;
+		}
+</style>
+<body>
+<div class="contr">
+	<div class="top">
+		<p>
+			<span><img class='top1' src="images/jt.png" alt=""></span>
+			<span class='ls'>找家政</span>
+			<span><img class='top2' src="images/fdj.png" alt=""></span>
+		</p>
+	</div>
+	<div class="search">
+		<div class="tex">
+			<input type="text" value='Search'>
+		</div>
+		<input class='fb' type="button" value='我要发布'>
+	</div>
+	<div class="gd" id='gd'>
+		<!--<ul class='gul'>
+			<li class='gl'></li>
+			<li></li>
+			<li></li>
+		</ul>-->
+		<div class="gds">
+			<div class="gd3"></div>
+			<div class="gd1"></div>
+			<div class="gd2"></div>
+			<div class="gd3"></div>
+			<div class="gd1"></div>
+		</div>
+	</div>
+	<div class="content">
+		<ul class='cul'>
+			<li><img src='images/c1.png' alt=''><p>钟点工</p></li>
+			<li><img src='images/c2.png' alt=''><p>保姆</p></li>
+			<li><img src='images/c3.png' alt=''><p>月嫂</p></li>
+			<li><img src='images/c4.png' alt=''><p>专业保洁</p></li>
+			<li><img src='images/c5.png' alt=''><p>家电清洗</p></li>
+			<li><img src='images/c6.png' alt=''><p>家居保养</p></li>
+			<li><img src='images/c7.png' alt=''><p>新居开荒</p></li>
+			<li><img src='images/c8.png' alt=''><p>更多</p></li>
+		</ul>
+		<ul class='cu1'>
+			<li><img src='images/tb.png' alt=''></li>
+			<li><img src='images/tb.png' alt=''></li>
+		</ul>
+	</div>
+</div>
+<script type='text/javascript' src='../jquery-3.1.0.min.js'></script>
+	<script type='text/javascript'>
+	var index=0;
+	var time=null;
+	var time1=null;
+	var time2=null;
+	var pw=$(document.body).width();
+	var index=pw;
+	$('.gd').eq(0).scrollLeft(index);
+	var pl=(100/640)*pw;
+	var bz=true;
+	var bz1=true;
+		$(function(){
+			$(document.body).css('display','none');
+			clearInterval(time);
+			$('html').eq(0).css('font-size',(100/640)*pw+'px');
+			$(document.body).css('display','block');
+			$('.co').scrollLeft(3.74*pl);
+//大图滚动
+			gundong();	
+		})
+
+		var gd=document.getElementById('gd');
+var stx,enx;
+gd.addEventListener('touchstart',function(e){
+	e.stopPropagation();
+	var touch = event.touches[0];
+	stx=touch.pageX;
+})
+gd.addEventListener('touchmove',function(e){
+	e.stopPropagation();
+	var touch = e.touches[0];
+	enx=touch.pageX;
+})
+gd.addEventListener('touchend',function(e){
+	e.stopPropagation();
+	if(enx-stx<-40){
+		clearInterval(time);
+		clearInterval(time1);
+		time1=setInterval(function(){
+				index+=4;
+				var sc=index;
+				if(index>=pw*3){
+					index=0;
+					sc=0;
+				}	
+				if(sc%pw<=3){
+					clearInterval(time1);
+					gundong();
+				}
+				$('.gd').eq(0).scrollLeft(sc);
+				},1)
+	}
+	if(enx-stx>40){
+		clearInterval(time);
+		clearInterval(time1);
+		time1=setInterval(function(){
+				index-=4;
+				var sc=index;
+				if(index<=3){
+					index=pw*3;
+					sc=pw*3;
+				}	
+				if(sc%pw<=3){
+					clearInterval(time1);
+					gundong();
+				}
+				$('.gd').eq(0).scrollLeft(sc);
+				},1)
+	}
+})
+function gundong(){
+		clearInterval(time);
+		time=setInterval(function(){
+				clearInterval(time1);
+				time1=setInterval(function(){
+				index+=4;
+				var sc=index;
+				if(index>=pw*3){
+					index=0;
+					sc=0;
+				}	
+				if(sc%pw<=3){
+					clearInterval(time1);
+				}
+				$('.gd').eq(0).scrollLeft(sc);
+				},1)			
+				},5000);
+	}
+//input聚焦时清空value
+		$('.tex input').focus(function(){
+			if($('.tex input').val()=='Search'){
+				$('.tex input').val('');
+			}		
+		})
+		$('.top1').click(function(){
+			window.history.go(-1);
+		})
+		$('.cul li').click(function(){
+			window.location.href='../shequ3/shequ3.html';
+		})
+	</script>
+</body>
+</html>

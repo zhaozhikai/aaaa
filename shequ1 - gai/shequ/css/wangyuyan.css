@@ -1,0 +1,258 @@
+/*头*/
+.header{
+	width: 100%;
+	background: #007af4;
+	}
+.head{
+	width: 5.85rem;/*margin: 0 auto;*/overflow: hidden;height: 0.4rem;padding: 0.23rem 0.27rem;
+}
+.fan{
+	width: 0.18rem;float: left;line-height: 0.4rem;width: 30%;margin-top: 0.05rem;
+}
+.fan img{
+	width: 0.18rem;float: left;
+}
+.wen{
+	float: left;font-size: 0.34rem;text-align: center;line-height: 0.4rem;width: 40%;color: #fff;
+}
+.ge{
+	width: 0.37rem;float: left;line-height: 0.4rem;width: 30%;
+}
+.ge img{
+	width: 0.37rem;float: right;margin-top: 0.03rem;
+}
+/*xian*/
+.xian{
+	width: 100%;height: 0.11rem;background: #f5f5f5;
+}
+.xian1{
+	width: 100%;height: 0.11rem;background: #f5f5f5;clear: both;
+}
+.rentou{
+	background: url(../img/wangyu.png) 0 0 no-repeat;width: 1.19rem;height: 1.24rem;
+	background-size:100% 100% ;margin: 0.16rem 0.17rem 0.5rem 0.18rem;float: left;
+}
+.jieshao{
+	float: left;    width: 73%;
+}
+.jieli1{
+	overflow: hidden;margin-top: 0.18rem;margin-bottom: 0.07rem;
+}
+/*.jieli1 span{
+	float: left;
+}*/
+.jieli1 span:nth-child(1){
+	font-size: 0.2rem;color: #333333;float: left;margin-right: 0.07rem;    line-height: 0.35rem;
+}
+
+.jieli1 span:nth-child(2){
+	background: url(../img/jiaoji.png) 0 0 no-repeat;width: 0.57rem;height: 0.31rem;float: 
+
+left;margin-right: 1rem;
+	background-size:100% 100% ;
+}
+.jieli2{
+	font-size: 0.16rem;color: #9a9a9a;margin-bottom: 0.15rem;
+}
+.jieli3{
+	overflow: hidden;padding-bottom: 0.15rem ;border-bottom: 1px solid #f5f5f5;
+}
+.jieli3 a:nth-child(1){
+	background: url(../img/guanzhu.png) 0 0 no-repeat;
+	width: 1.23rem;height: 0.5rem; float: left;background-size:100% 100% ;margin-right: 0.1rem;
+}
+.jieli3 a:nth-child(2){
+	background: url(../img/tiwen.png) 0 0 no-repeat;
+	width: 1.23rem;height: 0.5rem; float: left;background-size:100% 100% ;
+}
+.jieli1 span:nth-child(3){font-size: 0.16rem;color: #9a9a9a;float: right;line-height: 0.35rem;}
+.jieli4{
+	overflow: hidden;
+}
+.jieli4 span:nth-child(1){float: left;
+	background: url(../img/guan.png) 0 0 no-repeat;width:1.32rem ;height: 0.33rem;background-size:100% 100% ;
+}
+.jieli4 span:nth-child(2){float: left;
+	background: url(../img/hao.png) 0 0 no-repeat;width:1.03rem ;height: 0.33rem;background-size:100% 100% ;
+}
+.jieli4 span:nth-child(3){float: right;
+	background: url(../img/ju.png) 0 0 no-repeat;width:1.32rem ;height: 0.33rem;background-size:100% 100% ;
+}
+/*简介*/
+.jian{
+	width: 6.16rem;margin: 0 auto;margin-bottom: 0.2rem;
+}
+.jian p{
+	margin-top: 0.05rem;
+}
+.jian p:nth-child(1){
+	font-size: 0.24rem;line-height: 0.48rem;color: #333333;border-bottom: 1px solid 
+
+#dedede;padding-left: 0.09rem;
+}
+.jian p:nth-child(2) span:nth-child(1){
+	font-size: 0.16rem;color: #333333;float: left;line-height:0.33rem;
+}
+.jian p:nth-child(2) span:nth-child(2){
+	font-size: 0.16rem;color: #9a9a9a; float: left; 
+}
+
+.jian p:nth-child(3) span:nth-child(1){
+	font-size: 0.16rem;color: #333333;line-height: 0.28rem;float: left;
+}
+.jian p:nth-child(3) span:nth-child(2){
+	font-size: 0.16rem;color: #9a9a9a;line-height: 0.28rem;float: left;
+}
+.jian p:nth-child(4) span:nth-child(1){
+	font-size: 0.16rem;color: #333333;line-height: 0.28rem;float: left;
+}
+.jian p:nth-child(4) span:nth-child(2){
+	font-size: 0.16rem;color: #9a9a9a;line-height: 0.28rem;float: left;
+}
+.jian p:nth-child(5),.jian p:nth-child(6){
+	font-size: 0.16rem;color: #9a9a9a;
+}
+.jian p:nth-child(5){
+	margin-top: 0.1rem;
+}
+.jian p:nth-child(2),.jian p:nth-child(3),.jian p:nth-child(4){
+	/*line-height: 0.1rem;*/overflow: hidden;
+}
+.jian p:nth-child(2),.jian p:nth-child(3),.jian p:nth-child(4),.jian p:nth-child(5),.jian p:nth-child(6){
+	    margin-left: 0.15rem;
+    margin-right: 0.15rem;
+}
+/*.jian p:nth-child(2){
+	position: relative;
+}*/
+.renzheng{
+	line-height: 0.26rem;
+	    /*top: 0rem;
+    position: absolute; */   width: 2.02rem;
+    height: 0.26rem;   /* padding-top: 0.27rem;*/display:block;
+}
+/*评价*/
+.ping{
+	border-right: 0.1rem solid #f5f5f5;/*border-bottom: 0.9rem solid #f5f5f5;*/
+	width: 6.2rem;margin: 0 auto;border-top: 0.17rem solid #f5f5f5;border-left: 0.1rem solid #f5f5f5;
+}
+.pin{
+	overflow: hidden;border-bottom: 1px solid #dedede;
+}
+.pingzi{
+	font-size: 0.24rem;color: #333333;float: left;line-height: 0.54rem;margin-left: 0.14rem;
+	}
+	.pingzia{
+		float: right;margin-right: 0.22rem;
+	}
+.pingzia img{
+	width: 1rem;height: 0.35rem;display: block;margin-top: 0.095rem;
+}
+
+.liua img{
+	width: 0.76rem;height: 0.76rem;margin-right: 0.19rem;display: block;
+}
+.liuc span:nth-child(1){
+	font-size: 0.2rem;color: #525252;
+}
+.liuc span:nth-child(2){
+	font-size: 0.18rem;color: #cccccc;float: right;    padding-right: 0.18rem;
+}
+.liub{
+	font-size: 0.16rem;color: #666666;margin-top: 0.15rem;width: 5.1rem;line-height: 0.25rem;border-bottom: 1px solid #dedede;
+}
+.liu1,.liu2,.liu3{
+	overflow: hidden;margin-top: 0.16rem;margin-left: 0.14rem;
+}
+.liua,.liub{
+	float: left;
+}
+.liuc{
+	margin-bottom: 0.1rem;
+}
+.liud{
+	margin-bottom: 0.15rem;
+}
+/*底部*/
+.foot{
+	    position: fixed;
+    overflow: hidden;
+    bottom: 0.12px;
+    width: 100%;
+    height: 0.9rem;
+    background: #f5f5f5;
+}
+.foot a{
+	float: left;margin-left: 0.10rem;margin-top: 0.195rem;
+}
+.foot a:nth-child(1){
+	background: url(../img/fen.png) 0 0 no-repeat;width: 1.92rem;height: 0.51rem;
+	background-size:100% 100% ;
+}
+.foot a:nth-child(2){
+	background: url(../img/yulian.png) 0 0 no-repeat;width:4.19rem;height: 0.49rem;
+	background-size:100% 100% ;float: left;
+}
+
+/*分享*/
+#fenxiang{
+	display: none;
+	  height: 0.7rem;
+    position: fixed;
+    bottom: 0.9rem;
+    background: #fff;
+    width: 100%;}
+
+/*发布评论*/
+.gd{
+			display: none;
+			overflow: hidden;
+			position: fixed;
+			z-index: 3;
+			bottom:0;
+			width:100%;
+			height:0.9rem;
+			background:#F5F5F5;
+		}
+		.srk{
+			position: relative;
+			float:left;
+			width:3.96rem;
+			height:0.46rem;
+			margin-top:0.22rem;
+			margin-left:0.16rem;
+			background: url(../img/srk.png) 0 0 no-repeat;
+			background-size: 3.96rem 0.46rem;
+		}
+		.xpl{
+			position: absolute;
+			height:0.4rem;
+			width:3.2rem;
+			font-size: 0.16rem;
+			color:#d2d2d2;
+			background: none;
+			border:0px;
+			outline: none;
+			margin-bottom:0.2rem;
+			top:0.03rem;
+			left:0.52rem;
+		}
+		.gu{
+			margin-left:0.36rem;
+			list-style: none;
+			float:left;
+		}
+		.gu li{
+			overflow:hidden;
+			margin-top:0.2rem;
+			float:left;
+			margin-right:0.2rem;
+		}
+		li.last{
+			margin-right:0;
+		}
+		.gu li img{
+			float:left;
+			width:0.47rem;
+			height:0.47rem;
+		}

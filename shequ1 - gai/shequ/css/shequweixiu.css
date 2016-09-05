@@ -1,0 +1,168 @@
+/*头*/
+.header{
+	width: 100%;
+	background: #007af4;
+	}
+.head{
+	width: 5.85rem;/*margin: 0 auto;*/overflow: hidden;height: 0.4rem;padding: 0.23rem 0.27rem;
+}
+.fan{
+	width: 0.18rem;float: left;line-height: 0.4rem;width: 30%;margin-top: 0.05rem;
+}
+.fan img{
+	width: 0.18rem;float: left;
+}
+.wen{
+	float: left;font-size: 0.34rem;text-align: center;line-height: 0.4rem;width: 40%;color: #fff;
+}
+.ge{
+	width: 0.37rem;float: left;line-height: 0.4rem;width: 30%;
+}
+.ge img{
+	width: 0.37rem;float: right;margin-top: 0.03rem;
+}
+/*搜索·*/
+.search{
+			height:0.85rem;
+		}
+		.search input{
+			float:left;
+			background: none;
+			border:0px;
+			outline: none;
+			height:0.58rem;
+			font-size: 0.24rem;
+		}
+		.tex input{
+			width:4rem;
+			margin-left:0.5rem;
+		}
+		.tex{
+			float:left;
+			width:4.62rem;
+			height:0.58rem;
+			margin-top:0.135rem;
+			margin-left:0.14rem;
+			background: url(../img/search.png) 0 0 no-repeat;
+			background-size:100% 100%; 
+		}
+		input.fb{
+			display: block;
+			width:1.4rem;
+			color:#fff;
+			font-weight: bold;
+			background: #007AF4;
+			margin-top:0.135rem;
+			margin-left:0.13rem;
+			border-radius: 0.08rem;
+		}
+		/*大图滚动*/
+		/*.gd{
+			overflow: hidden;
+			position: relative;
+			width:100%;
+		}
+		.gds{
+			width:25.6rem;
+			overflow: hidden;
+			height:3rem;
+		}
+		.gul{
+			overflow: hidden;
+    position: absolute;
+    z-index: 5;
+    right: 2.96rem;
+    bottom: 0.1rem;
+		}
+		.gul li{
+			    float: left;
+    width: 0.13rem;
+    height: 0.13rem;
+    margin-left: 0.09rem;
+    border-radius: 50%;
+			background: #4C93EB;
+		}
+		li.gl{
+			background: #fff;
+		}
+		.gd1,.gd2,.gd3{
+			float:left;
+			width:6.4rem;
+			height:3rem;
+		}
+		.gd1{
+			background: url(../img/weixiu.png) 0 0 no-repeat;
+			background-size: 100% 100%;
+		}
+		.gd2{
+			background: url(../img/lbei.png) 0 0 no-repeat;
+			background-size: 100% 100%;
+		}
+		.gd3{
+			background: url(../img/tu.png) 0 0 no-repeat;
+			background-size: 100% 100%;
+		}*/
+		#box{
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      height: 3rem;
+      /*margin: 100px auto;*/
+    }
+    .img_wrap {
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      top: 0;
+    }
+    .img_wrap a {
+      float: left;width:6.4rem;
+			height:3rem;
+    }
+    #box img{
+    	width:6.4rem;
+			height:3rem;
+    }
+    .btn_wrap {
+      position: absolute;
+      z-index: 2;
+      bottom: 0rem;
+      width: 100%;
+      text-align: center;
+    }
+    .btn_wrap a {
+      display: inline-block;
+     width: 0.13rem;
+    height: 0.13rem;
+    margin-left: 0.09rem;
+    border-radius: 50%;
+			background: #4C93EB;
+    }
+    .btn_wrap a.btn_cur {
+      background-color: #fff;
+    }
+		/*学习阶段*/
+		/*学习阶段*/
+.lei{
+	overflow: hidden;margin-bottom: 1.24rem;margin-top: 0.53rem;
+}
+.lei li{
+	float: left;margin: 0 0.27rem;
+}
+.lei img{
+	width: 1.04rem;
+}
+.lei p{
+	font-size: 0.24rem;text-align: center;
+}
+/*top排行榜*/
+/*di*/
+.top{
+	width: 100%;height: 0.27rem;display: block;
+}
+.foot{
+	width: 100%;margin-top: 0.2rem;overflow: hidden;
+}
+.foot img{
+	width: 2.89rem;float: left;margin-left: 0.2rem;
+}

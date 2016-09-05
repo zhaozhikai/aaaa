@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en" style='font-size: 100px;'>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>Document</title>
+	<style type='text/css'>
+		*{
+			margin:0;
+			padding:0;
+		}
+		html,body{
+			font-size: 100px;
+			width: 100%;
+		}
+		.co{
+			width:6.4rem;
+			overflow: hidden;
+		}
+		.cont{
+			width:10.14rem;
+			overflow: hidden;
+		}
+		.contl{
+			background: #007AF4;
+			width:3.74rem;
+			float:left;
+		}
+		.coul{
+			list-style: none;
+			margin-top:0.4rem;
+			margin-left:0.46rem;
+		}
+		.coul li{
+			color:#fff;
+			font-size: 0.3rem;
+			margin-top:0.3rem;
+			line-height: 0.58rem;
+		}
+		.cousel{
+			border-radius: 0.29rem;
+			background: #1E4BA0;
+		}
+		.coul li img{
+			padding-left:0.2rem;
+			vertical-align: middle;
+			padding-bottom: 0.1rem;
+			margin-right:0.32rem;
+			width:0.44rem;
+			height:0.44rem;
+		}
+		.dl{
+			overflow: hidden;
+			margin-top:0.82rem;
+		}
+		.ltx{
+			float:left;
+			margin-left:0.42rem;
+			vertical-align: middle;
+			width:0.98rem;
+			height:0.98rem;
+		}
+		.yh{
+			float:left;
+			color:#fff;
+			margin-left:0.2rem;
+			line-height: 0.98rem;
+			font-size: 0.3rem;
+		}
+		.contr{
+			width:6.4rem;
+			float:left;
+		}
+		.top{
+			width:100%;
+			background: #007AF4;
+		}
+		.top p{
+			    overflow: hidden;
+    line-height: 0.88rem;
+		}
+		.top p span{
+			float:left;
+		}
+		.top p span img{
+			vertical-align: top;
+		}
+		.ls{
+			color:#fff;
+			font-weight: bold;
+			font-size: 0.34rem;
+			margin-right:1.19rem;
+		}
+		.bj{
+			color:#fff;
+			font-weight: bold;
+			font-size: 0.3rem;
+		}
+		.top1{
+			    width: 0.4rem;
+    height: 0.24rem;
+    margin-left: 0.2rem;
+    margin-right: 1.85rem;
+    margin-top: 0.32rem;
+		}
+		.top2{
+			width:0.35rem;
+			height:0.41rem;
+			margin-right:0.2rem;
+			margin-top:0.2rem;
+		}
+		.search{
+			height:0.85rem;
+		}
+		.search input{
+			float:left;
+			background: none;
+			border:0px;
+			outline: none;
+			height:0.58rem;
+			font-size: 0.24rem;
+		}
+		.tex input{
+			width:4rem;
+			margin-left:0.5rem;
+		}
+		.tex{
+			float:left;
+			width:4.62rem;
+			height:0.58rem;
+			margin-top:0.135rem;
+			margin-left:0.14rem;
+			background: url(shequ1/images/search.png) 0 0 no-repeat;
+			background-size:100% 100%; 
+		}
+		input.fb{
+			display: block;
+			width:1.4rem;
+			color:#fff;
+			font-weight: bold;
+			background: #007AF4;
+			margin-top:0.135rem;
+			margin-left:0.13rem;
+			border-radius: 0.08rem;
+		}
+		.gd{
+			overflow: hidden;
+			position: relative;
+			width:100%;
+		}
+		.gds{
+			width:25.6rem;
+			overflow: hidden;
+			height:3rem;
+		}
+		.gul{
+			overflow: hidden;
+			position: absolute;
+			z-index: 1;
+			right:0.1rem;
+			bottom:0.1rem;
+		}
+		.gul li{
+			float:left;
+			width:0.16rem;
+			height:0.16rem;
+			margin-left:0.14rem;
+			border-radius: 50%;
+			background: #4C93EB;
+		}
+		li.gl{
+			background: #fff;
+		}
+		.gd1,.gd2,.gd3{
+			float:left;
+			width:6.4rem;
+			height:3rem;
+		}
+		.gd1{
+			background: url(shequ1/images/gd1.png) 0 0 no-repeat;
+			background-size: 100% 100%;
+		}
+		.gd2{
+			background: url(shequ1/images/tu.png) 0 0 no-repeat;
+			background-size: 100% 100%;
+		}
+		.gd3{
+			background: url(shequ1/images/weixiu.png) 0 0 no-repeat;
+			background-size: 100% 100%;
+		}
+		.tq{
+			width:100%;
+			overflow: hidden;
+			background: #F5F5F5;
+		}
+		.tq1,.tq2{
+			color:#666666;
+			float:left;
+			padding-top:0.2rem;
+			padding-bottom: 0.1rem;
+			font-size: 0.24rem;
+		}
+		.tq1 p,.tq2 p{
+			margin-bottom:0.1rem;
+		}
+		.tq1{
+			margin-left:0.24rem;
+			margin-right:2rem;
+		}
+		.tq img{
+			float:left;
+			margin-top:0.26rem;
+			margin-left:0.28rem;
+			width:0.59rem;
+			height:0.48rem;
+		}
+		.content ul{
+			float:left;
+			margin-left:0.1rem;
+			overflow: hidden;
+			list-style: none;
+		}
+		.content ul li{
+			padding:0.27rem 0.5rem 0.27rem 0.5rem;
+			border:0.02rem solid #EAEAEA;
+			text-align: center;
+			font-size: 0.24rem;
+			float:left;
+		}
+		.content ul li img{
+			width:1.04rem;
+			height:1.04rem;
+			margin-bottom: 0.1rem;
+		}
+		.cons{
+			background: #007AF4;
+		}
+		.coul li:nth-child(10){
+			    margin-bottom: 0.26rem;
+		}
+	</style>
+</head>
+<body>
+<div class="co" id='co'>
+<div class="cont">
+<div class="contl" id='contl'>
+	<div class='dl'>
+		<img class='ltx' src="shequ1/images/ltx.png" alt="">
+		<span class='yh'>iViperious</span>
+	</div>
+	<ul class='coul'>
+		<li><img src="shequ1/images/cai1.png" alt="">找家教</li>
+		<li><img src="shequ1/images/cai2.png" alt="">送水到家</li>
+		<li><img src="shequ1/images/cai3.png" alt="">维修服务</li>
+		<li><img src="shequ1/images/cai4.png" alt="">家政服务</li>
+		<li><img src="shequ1/images/cai5.png" alt="">社区互动</li>
+		<li><img src="shequ1/images/cai6.png" alt="">消息中心</li>
+		<li><img src="shequ1/images/cai7.png" alt="">我的收藏</li>
+		<li><img src="shequ1/images/cai8.png" alt="">我的发布</li>
+		<li><img src="shequ1/images/cai9.png" alt="">账号设置</li>
+		<li><img src="shequ1/images/cai10.png" alt="">退出登录</li>
+	</ul>
+</div>
+<div class="contr">
+	<div class="top">
+		<p>
+			<span><img class='top1' id='top1' src="shequ1/images/top1.png" alt=""></span>
+			<span class='ls'>龙山家园</span>
+			<span><img class='top2' src="shequ1/images/top2.png" alt=""></span>
+			<span class='bj'>北京</span>
+		</p>
+	</div>
+	<div class="search">
+		<div class="tex">
+			<input type="text" value='Search'>
+		</div>
+		<input class='fb' type="button" value='我要发布'>
+	</div>
+	<div class="gd" id='gd'>
+		<!--<ul class='gul'>
+			<li class='gl'></li>
+			<li></li>
+			<li></li>
+		</ul>-->
+		<div class="gds">
+			<div class="gd3"></div>
+			<div class="gd1"></div>
+			<div class="gd2"></div>
+			<div class="gd3"></div>
+			<div class="gd1"></div>
+		</div>
+	</div>
+	<div class="tq">
+		<img src="shequ1/images/clound.png" alt="">
+		<div class="tq1">
+			<p>多云/小雨 27/30C</p>
+			<p>3-4级/4-5级风</p>
+		</div>
+		<div class="tq2">
+			<p>星期一</p>
+			<p>18:00</p>
+		</div>
+	</div>
+	<div class="content">
+		<ul>
+			<li>
+				<img src='shequ1/images/con1.png' alt=''>
+				<p>找家教</p>
+			</li>
+			<li>
+				<img src='shequ1/images/con2.png' alt=''>
+				<p>送水到家</p>
+			</li>
+			<li>
+				<img src='shequ1/images/con3.png' alt=''>
+				<p>维修服务</p>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<img src='shequ1/images/con4.png' alt=''>
+				<p>家政</p>
+			</li>
+			<li>
+				<img src='shequ1/images/con5.png' alt=''>
+				<p>社区互动</p>
+			</li>
+			<li>
+				<img src='shequ1/images/con6.png' alt=''>
+				<p>更多服务</p>
+			</li>
+		</ul>
+	</div>
+</div>
+</div>
+</div>
+	<script type='text/javascript' src='jquery-3.1.0.min.js'></script>
+	<script type='text/javascript'>
+	var time=null;
+	var time1=null;
+	var time2=null;
+	var pw=$(document.body).width();
+	var index=pw;
+	$('.gd').eq(0).scrollLeft(index);
+	var pl=(100/640)*pw;
+	var bz=true;
+	var bz1=true;
+		$(function(){
+			$(document.body).css('display','none');
+			$('html').eq(0).css('font-size',(100/640)*pw+'px');
+			$(document.body).css('display','block');
+			$('.co').scrollLeft(3.74*pl);
+//大图滚动
+			gundong();	
+		})
+		function gundong(){
+		clearInterval(time);
+		time=setInterval(function(){
+				clearInterval(time1);
+				time1=setInterval(function(){
+				index+=4;
+				var sc=index;
+				if(index>=pw*3){
+					index=0;
+					sc=0;
+				}	
+				if(sc%pw<=3){
+					clearInterval(time1);
+				}
+				$('.gd').eq(0).scrollLeft(sc);
+				},1)			
+				},5000);
+	}
+//input聚焦时清空value
+		$('.tex input').focus(function(){
+			if($('.tex input').val()=='Search'){
+				$('.tex input').val('');
+			}		
+		})
+//点击头部左侧图片，滑出右侧菜单栏
+var contl=document.getElementById('co');
+var starx,endx,ff;
+contl.addEventListener('touchstart',function(event){
+	 var touch = event.touches[0];
+	 ff=true;
+	 starx=touch.pageX;
+},false);
+contl.addEventListener('touchmove',function(e){
+/*		e.preventDefault();*/
+		ff=false;
+		var touch = e.touches[0];
+		endx=touch.pageX;
+
+},false);
+var sl=0;
+var sbz1=true;
+var sbz2=true;
+contl.addEventListener('touchend',function(e){
+	if(ff){
+		var tar=e.target||e.srcElement;
+		if(tar.id!='top1'){
+			return;
+		}
+	}else{
+		if(endx-starx<=-40){
+			if(sbz1){
+				if(bz1==false){
+					if(bz){
+				clearInterval(time2);
+				var pz=0;
+				time2=setInterval(function(){
+				pz+=8;
+				if(pz>=3.74*pl){
+					pz=3.74*pl;
+					clearInterval(time2);
+					bz=true;
+					bz1=true;
+				}
+				$('.co').scrollLeft(pz);
+			},1);
+				sbz1=false;
+				sbz2=true;
+		}
+				}
+			}
+		}
+		if(endx-starx>=40){
+			if(sbz2){
+				if(bz1){
+					if(bz){
+				bz=false;
+				clearInterval(time2);
+				var pz=3.74*pl;
+				time2=setInterval(function(){
+				pz-=8;
+				if(pz<=0){
+					pz=0;
+					clearInterval(time2);
+					bz=true;
+					bz1=false;
+				}
+				$('.co').scrollLeft(pz);
+			},1);
+				sbz2=false;
+				sbz1=true;
+			}
+				}
+			}
+		}
+	}
+},false);
+var top1=document.getElementById('top1');
+top1.addEventListener('touchstart',function(e){
+	e.stopPropagation();
+},false);
+top1.addEventListener('touchmove',function(e){
+	e.stopPropagation();
+},false);
+top1.addEventListener('touchend',function(e){
+	e.stopPropagation();
+},false);
+$('.top1').click(function(e){
+			e.stopPropagation();
+			if(bz1){
+				if(bz){
+				bz=false;
+				clearInterval(time2);
+				var pz=3.74*pl;
+				time2=setInterval(function(){
+				pz-=8;
+				if(pz<=0){
+					pz=0;
+					bz=true;
+					bz1=false;
+					sbz2=false;
+					sbz1=true;
+					clearInterval(time2);
+				}
+				$('.co').scrollLeft(pz);
+			},1);
+			}
+		}else{
+				if(bz){
+				bz=false;
+				clearInterval(time2);
+				var pz=0;
+				time2=setInterval(function(){
+				pz+=8;
+				if(pz>=3.74*pl){
+					pz=3.74*pl;
+					clearInterval(time2);
+					bz=true;
+					bz1=true;
+					sbz1=false;
+					sbz2=true;
+				}
+				$('.co').scrollLeft(pz);
+			},1);
+			}
+			}
+		});
+$('.coul li').click(function(){
+	$(this).addClass('cousel').siblings().removeClass('cousel');
+})
+$('.content ul').eq(0).children('li').click(function(){
+	var index=$(this).index();
+	switch(index){
+		case 0:window.location.href='shequ/zhaojiajiao.html';break;
+		case 1:window.location.href='shequ9/shequ9.html';break;
+		case 2:window.location.href='shequ/shequweixiu.html';break;
+	}
+})
+$('.content ul').eq(1).children('li').click(function(){
+	var index=$(this).index();
+	switch(index){
+		case 0:window.location.href='shequ6/shequ6.html';break;
+		case 1:window.location.href='shequ1/hudong.html';break;
+	}
+})
+$('.coul li').click(function(){
+	var index=$(this).index();
+	switch(index){
+		case 0:window.location.href='shequ/zhaojiajiao.html';break;
+		case 1:window.location.href='shequ9/shequ9.html';break;
+		case 2:window.location.href='shequ/shequweixiu.html';break;
+		case 3:window.location.href='shequ6/shequ6.html';break;
+		case 4:window.location.href='shequ1/hudong.html';break;
+		case 5:break;
+		case 6:window.location.href='shequ4/shequ4.html';break; 
+	}
+})
+$('.top2').click(function(){
+			window.location.href='baidu4.html';
+		})
+var gd=document.getElementById('gd');
+var stx,enx;
+gd.addEventListener('touchstart',function(e){
+	e.stopPropagation();
+	var touch = event.touches[0];
+	stx=touch.pageX;
+})
+gd.addEventListener('touchmove',function(e){
+	e.stopPropagation();
+	var touch = e.touches[0];
+	enx=touch.pageX;
+})
+gd.addEventListener('touchend',function(e){
+	e.stopPropagation();
+	if(enx-stx<-40){
+		clearInterval(time);
+		clearInterval(time1);
+		time1=setInterval(function(){
+				index+=4;
+				var sc=index;
+				if(index>=pw*3){
+					index=0;
+					sc=0;
+				}	
+				if(sc%pw<=3){
+					clearInterval(time1);
+					gundong();
+				}
+				$('.gd').eq(0).scrollLeft(sc);
+				},1)
+	}
+	if(enx-stx>40){
+		clearInterval(time);
+		clearInterval(time1);
+		time1=setInterval(function(){
+				index-=4;
+				var sc=index;
+				if(index<=3){
+					index=pw*3;
+					sc=pw*3;
+				}	
+				if(sc%pw<=3){
+					clearInterval(time1);
+					gundong();
+				}
+				$('.gd').eq(0).scrollLeft(sc);
+				},1)
+	}
+})
+	</script>
+</body>
+</html>

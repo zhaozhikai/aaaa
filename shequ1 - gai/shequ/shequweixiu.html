@@ -1,0 +1,321 @@
+﻿<!DOCTYPE html>
+<html style="font-size: 100px;">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>社区维修</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/shequweixiu.css"/>
+	</head>
+		<style type="text/css">
+		.ge {
+    width: 0.37rem;
+    float: right;
+    /*margin-left: 1.3rem;*/
+    line-height: 0.4rem;
+    /* width: 30%; */
+}
+.fan {
+    width: 0.18rem;
+    float: left;
+    line-height: 0.4rem;
+    /* width: 30%; */
+    margin-right: 29%;
+    margin-top: 0.05rem;
+}
+	</style>
+	<body>
+		<!--头部-->
+		<div class="header">
+			<div class="head">
+		<a href="javascript:window.history.go(-1)" class="fan"><img src="img/fanhui.png"/></a>
+		<span class="wen">维修服务</span>
+		<a href="" class="ge"><img src="img/geren.png"/></a>
+	</div>
+		</div>
+		<!--搜索·-->
+		<div class="search">
+		<div class="tex">
+			<input type="text" value='Search'>
+		</div>
+		<input class='fb' type="button" value='我要发布'>
+	</div>
+	<!--大图滚动-->
+	 <div id="box">
+    <div class="img_wrap">
+      <a href="#"><img src="img/weixiu.png" alt="#"></a>
+      <a href="#"><img src="img/lbei.png" alt="#"></a>
+      <a href="#"><img src="img/tu.png" alt="#"></a>
+      <!--<a href="#"><img src="images/8.jpg" alt="#"></a>-->
+    </div>
+    <div class="btn_wrap">
+      <a href="javascript:;" class="btn_cur"></a>
+      <a href="javascript:;"></a>
+      <a href="javascript:;"></a>
+      <!--<a href="javascript:;"></a>-->
+    </div>
+  </div>
+	<!--<div class="gd">
+		<ul class='gul'>
+			<li class='gl'></li>
+			<li></li>
+			<li></li>
+		</ul>
+		<div class="gds">
+			<div class="gd1">1</div>
+			<div class="gd2">2</div>
+			<div class="gd3">3</div>
+			<div class="gd1">1</div>
+		</div>
+	</div>-->
+	<!--阶段-->
+		<ul class="lei">
+			<li>
+				<a href="../shequ7/shequ7.html">
+					<img src="img/biao1.png"/>
+				</a>
+				<p>商家</p>
+			</li>
+			<li>
+				<a href="../shequ4/shequ4.html">
+					<img src="img/biao2.png"/>
+				</a>
+				<p>收藏</p>
+			</li>
+			<li>
+				<a href="../shequ2/shequ2.html">
+					<img src="img/biao3.png"/>
+				</a>
+				<p>反馈</p>
+			</li>
+			<li>
+				<a href="">
+					<img src="img/biao4.png"/>
+				</a>
+				<p>更多</p>
+			</li>
+		</ul>
+		<!--top排行榜-->
+		<!--top-->
+		<img class="top" src="img/xian.png"/>
+		<!--底-->
+		<div class="foot">
+			<a href=""><img src="img/zuo1.png"/></a>
+			<a href=""><img src="img/zuo2.png"/></a>
+			
+		</div>
+	</body>
+	<script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+	<script src="js/reset.js" type="text/javascript"></script>
+	<script src="js/shequweixiu.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		window.onload = function () {
+      var banner1 = new Banner("box");
+      banner1.fnInital();
+
+//    var banner2 = new ChildBanner("box2");
+//    banner2.fnInital();
+    };
+
+    function Banner(id) {
+      this.oBox = document.getElementById(id);
+      this.img_wrap = fnGetByCls(this.oBox, "div", "img_wrap")[0];
+      this.imgMenu = this.img_wrap.getElementsByTagName("a");
+      this.btn_wrap = fnGetByCls(this.oBox, "div", "btn_wrap")[0];
+      this.btnMenu = this.btn_wrap.getElementsByTagName("a");
+
+      this.img_w = this.imgMenu[0].offsetWidth;
+      this.img_h = this.imgMenu[0].offsetHeight;
+      this.iNow = 0;
+      this.iNow2 = 0;
+      this.timer = null;
+      this.b_stop = true;
+    };
+
+    Banner.prototype.fnInital = function () {
+      var _that = this; // 当前对象的 this
+
+      for (var i = 0; i < this.btnMenu.length; i++) {
+        this.btnMenu[i].index = i;
+
+        this.btnMenu[i].onclick = function () {
+          if (_that.b_stop) {
+            _that.b_stop = false;
+
+            _that.fnTab(this.index);
+
+            clearInterval(_that.timer);
+
+            $(_that.img_wrap).animate({left: -this.index * _that.img_w}, 640, function () {
+              _that.timer = setInterval(function () {
+                _that.fnPlay();
+              }, 3000);
+
+              _that.b_stop = true;
+            });
+
+            _that.iNow = this.index;
+            _that.iNow2 = this.index;
+          }
+        };
+      }
+
+      this.fnSetWidth(); // 设置宽度
+      this.timer = setInterval(function () {
+        _that.fnPlay();
+      }, 3000); // 自动播放
+    };
+
+    Banner.prototype.fnSetWidth = function () {
+      this.img_wrap.style.width = this.img_w * this.imgMenu.length + "px";
+    };
+
+    Banner.prototype.fnTab = function (index) { // 这里接受到的是一个下标
+      for (var j = 0; j < this.btnMenu.length; j++) {
+        this.btnMenu[j].setAttribute("class", "");
+      }
+
+      this.btnMenu[index].setAttribute("class", "btn_cur");
+    };
+
+    Banner.prototype.fnPlay = function () {
+      var _that = this;
+
+      if (this.b_stop) {
+        this.b_stop = false;
+
+        if (this.iNow == this.imgMenu.length - 1) {
+          this.iNow = 0;
+
+          this.imgMenu[0].style.position = "relative";
+          this.imgMenu[0].style.left = this.img_w * this.imgMenu.length + "px";
+        } else {
+          this.iNow ++;
+        }
+
+        this.iNow2 ++;
+
+        this.fnTab(this.iNow);
+
+        $(this.img_wrap).animate({left: -this.iNow2 * this.img_w}, 640, function () {
+          if (_that.iNow == 0) {
+            _that.iNow2 = 0;
+
+            _that.imgMenu[0].style.position = "static";
+            _that.img_wrap.style.left = 0;
+          }
+
+          _that.b_stop = true;
+        });
+      }
+    };
+
+
+    // 继承下来的子轮播图
+    function ChildBanner(id) {
+      Banner.call(this, id);
+    };
+
+    fnExtend(Banner.prototype, ChildBanner.prototype);
+
+    ChildBanner.prototype.fnInital = function () {
+      var _that = this; // 当前对象的 this
+
+      for (var i = 0; i < this.btnMenu.length; i++) {
+        this.btnMenu[i].index = i;
+
+        this.btnMenu[i].onclick = function () {
+          if (_that.b_stop) {
+            _that.b_stop = false;
+
+            _that.fnTab(this.index);
+
+            clearInterval(_that.timer);
+
+            $(_that.img_wrap).animate({top: -this.index * _that.img_h}, 640, function () {
+              _that.timer = setInterval(function () {
+                _that.fnPlay();
+              }, 3000);
+
+              _that.b_stop = true;
+            });
+
+            _that.iNow = this.index;
+            _that.iNow2 = this.index;
+          }
+        };
+      }
+
+      this.fnSetWidth(); // 设置宽度
+      this.timer = setInterval(function () {
+        _that.fnPlay();
+      }, 3000); // 自动播放
+    };
+
+    // 这里要重写上面的 fnSetWidth
+    ChildBanner.prototype.fnSetWidth = function () {
+      this.img_wrap.style.height = this.img_h * this.imgMenu.length + "px";
+    };
+
+    ChildBanner.prototype.fnPlay = function () {
+      var _that = this;
+
+      if (this.b_stop) {
+        this.b_stop = false;
+
+        if (this.iNow == this.imgMenu.length - 1) {
+          this.iNow = 0;
+
+          this.imgMenu[0].style.position = "relative";
+          this.imgMenu[0].style.top = this.img_h * this.imgMenu.length + "px";
+        } else {
+          this.iNow ++;
+        }
+
+        this.iNow2 ++;
+
+        this.fnTab(this.iNow);
+
+        $(this.img_wrap).animate({top: -this.iNow2 * this.img_h}, 640, function () {
+          if (_that.iNow == 0) {
+            _that.iNow2 = 0;
+
+            _that.imgMenu[0].style.position = "static";
+            _that.img_wrap.style.top = 0;
+          }
+
+          _that.b_stop = true;
+        });
+      }
+    };
+
+
+
+    // 下面是需要用到的函数
+
+    function fnGetByCls(oParent, tagName, sCls) {
+      var aElem = oParent.getElementsByTagName(tagName);
+      var result = [];
+
+      for (var i = 0; i < aElem.length; i++) {
+        var get_cls = aElem[i].className.split(" ");
+
+        for (var j = 0; j < get_cls.length; j++) {
+          if (get_cls[j] == sCls) {
+            result.push(aElem[i]);
+          }
+
+          break;
+        }
+      }
+
+      return result;
+    };
+
+    function fnExtend(parentObj, childObj) {
+      for (var attr in parentObj) {
+        childObj[attr] = parentObj[attr];
+      }
+    };
+	</script>
+</html>
